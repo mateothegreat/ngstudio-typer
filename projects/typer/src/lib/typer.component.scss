@@ -1,0 +1,23 @@
+:host {
+
+    .blinking {
+
+        margin-left: 5px;
+        border-right-style: solid;
+        animation: infinite 1s blink;
+
+    }
+
+    @keyframes blink {
+
+        to {
+
+            opacity: 0;
+
+        }
+
+    }
+
+    float: left;
+
+}

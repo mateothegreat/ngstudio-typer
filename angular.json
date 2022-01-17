@@ -124,6 +124,37 @@
           }
         }
       }
+    },
+    "typer": {
+      "projectType": "library",
+      "root": "projects/typer",
+      "sourceRoot": "projects/typer/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/typer/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/typer/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/typer/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/typer/src/test.ts",
+            "tsConfig": "projects/typer/tsconfig.spec.json",
+            "karmaConfig": "projects/typer/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngstudio-typer"
